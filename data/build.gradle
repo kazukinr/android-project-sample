@@ -1,14 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
     apply from: '../gradle/androidConfigs.gradle', to: android
-
-    defaultConfig {
-        applicationId "com.github.kazukinr.android.sample"
-    }
 
     buildTypes {
         release {
@@ -21,12 +17,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':domain')
-
-    implementation deps.kotlin
-    implementation deps.androidxCore
     implementation deps.appcompat
-    implementation deps.constraintLayout
 
     // dagger2
     implementation deps.dagger

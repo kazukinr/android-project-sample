@@ -1,0 +1,21 @@
+ext.deps = [
+        // kotlin
+        kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+
+        // androidx
+        androidxCore            : 'androidx.core:core-ktx:1.0.1',
+        appcompat               : 'androidx.appcompat:appcompat:1.0.2',
+        constraintLayout        : 'androidx.constraintlayout:constraintlayout:2.0.0-alpha5',
+
+        // dagger2
+        dagger                  : 'com.google.dagger:dagger:2.22.1',
+        daggerAndroid           : 'com.google.dagger:dagger-android:2.22.1',
+        daggerAndroidSupport    : 'com.google.dagger:dagger-android-support:2.22.1',
+        daggerCompiler          : 'com.google.dagger:dagger-compiler:2.22.1',
+        daggerProcessor         : 'com.google.dagger:dagger-android-processor:2.22.1',
+
+        // tests
+        junit                   : 'junit:junit:4.12',
+        androidxTestRunner      : 'androidx.test:runner:1.1.1',
+        espressoCore            : 'androidx.test.espresso:espresso-core:3.1.1'
+]
