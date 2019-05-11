@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">android-project-sample</string>
+
+    <string name="top_button_to_binding_sample">To Binding Sample</string>
+
+    <string name="binding_sample_input_text_hint">Please input text</string>
+    <string name="binding_sample_copy_input_text_label">Copy of InputText : </string>
+    <string name="binding_sample_length_input_text_label">Length of InputText : </string>
 </resources>

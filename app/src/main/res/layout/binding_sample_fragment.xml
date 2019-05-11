@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable name="viewData" type="com.github.kazukinr.android.sample.ui.binding_sample.BindingSampleViewData"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_begin="16dp"
+                android:id="@+id/guidelineStart"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_end="16dp"
+                android:id="@+id/guidelineEnd"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="@string/binding_sample_input_text_hint"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText"
+                    android:text="@={viewData.inputText}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+                android:id="@+id/copyTextLabel"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:text="@string/binding_sample_copy_input_text_label"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout"/>
+
+        <TextView
+                android:id="@+id/lengthTextLabel"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:text="@string/binding_sample_length_input_text_label"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@id/copyTextLabel"/>
+
+        <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierLabelEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:barrierMargin="8dp"
+                app:constraint_referenced_ids="copyTextLabel,lengthTextLabel"/>
+
+        <TextView
+                android:id="@+id/copyTextValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewData.inputText}"
+                app:layout_constraintStart_toStartOf="@id/barrierLabelEnd"
+                app:layout_constraintBaseline_toBaselineOf="@id/copyTextLabel"/>
+
+        <TextView
+                android:id="@+id/lengthTextValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{Integer.toString(viewData.inputTextLength)}"
+                app:layout_constraintStart_toStartOf="@id/barrierLabelEnd"
+                app:layout_constraintBaseline_toBaselineOf="@id/lengthTextLabel"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
