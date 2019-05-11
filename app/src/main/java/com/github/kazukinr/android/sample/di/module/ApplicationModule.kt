@@ -12,6 +12,7 @@ import dagger.android.support.AndroidSupportInjectionModule
     includes = [
         AndroidSupportInjectionModule::class,
         ActivityModule::class,
+        ViewModelModule::class,
         DomainModule::class
     ]
 )

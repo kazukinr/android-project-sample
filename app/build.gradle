@@ -27,6 +27,8 @@ dependencies {
     implementation deps.androidxCore
     implementation deps.appcompat
     implementation deps.constraintLayout
+    implementation deps.lifecycleExtensions
+    kapt deps.lifecycleCompiler
 
     // dagger2
     implementation deps.dagger
@@ -34,6 +36,9 @@ dependencies {
     implementation deps.daggerAndroidSupport
     kapt deps.daggerCompiler
     kapt deps.daggerProcessor
+
+    // uitilities
+    implementation deps.timber
 
     // tests
     testImplementation deps.junit
