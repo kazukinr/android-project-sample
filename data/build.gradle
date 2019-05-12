@@ -17,6 +17,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation deps.kotlin
+    implementation deps.ktx
     implementation deps.appcompat
 
     // dagger2

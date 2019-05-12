@@ -19,6 +19,8 @@ dependencies {
 
     api project(':data')
 
+    implementation deps.kotlin
+    implementation deps.ktx
     implementation deps.appcompat
 
     // dagger2

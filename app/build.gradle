@@ -30,7 +30,7 @@ dependencies {
     implementation project(':domain')
 
     implementation deps.kotlin
-    implementation deps.androidxCore
+    implementation deps.ktx
     implementation deps.appcompat
     implementation deps.constraintLayout
     implementation deps.lifecycleExtensions
