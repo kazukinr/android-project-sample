@@ -10,9 +10,11 @@ A sample project of basic android app.
     - Lifecycle
     - LiveData
     - Navigation
+    - Room
   - Android KTX
   - AppCompat
   - ConstraintLayout
   - DataBinding
 - Dagger2
+- RxJava2
 - Timber

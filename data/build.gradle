@@ -20,6 +20,9 @@ dependencies {
     implementation deps.kotlin
     implementation deps.ktx
     implementation deps.appcompat
+    implementation deps.roomRuntime
+    kapt deps.roomCompiler
+    implementation deps.roomRxJava2
 
     // dagger2
     implementation deps.dagger
@@ -27,6 +30,9 @@ dependencies {
     implementation deps.daggerAndroidSupport
     kapt deps.daggerCompiler
     kapt deps.daggerProcessor
+
+    // Rx
+    implementation deps.rxJava2
 
     // tests
     testImplementation deps.junit
