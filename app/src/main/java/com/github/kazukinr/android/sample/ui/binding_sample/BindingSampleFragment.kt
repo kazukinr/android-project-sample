@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.github.kazukinr.android.sample.R
 import com.github.kazukinr.android.sample.databinding.BindingSampleFragmentBinding
+import com.github.kazukinr.android.sample.event.EventLiveDataObserver
 import com.github.kazukinr.android.sample.ui.get
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
@@ -42,5 +44,22 @@ class BindingSampleFragment : DaggerFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.viewData = viewModel.viewData
+        binding?.listener = viewModel
+        viewModel.event.observe(this, EventLiveDataObserver(this::handleViewModelEvent))
+    }
+
+    private fun handleViewModelEvent(event: BindingSampleViewModelEvent) {
+        when (event) {
+            is BindingSampleViewModelEvent.NavigateToTop -> {
+                binding?.buttonBackToTop?.also {
+                    Navigation.findNavController(it).popBackStack(R.id.top_fragment, false)
+                }
+            }
+        }
+    }
+
+    interface Listener {
+
+        fun onBackToTopClicked()
     }
 }

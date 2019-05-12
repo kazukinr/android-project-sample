@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_graph"
+            app:startDestination="@id/top_fragment">
+
+    <fragment
+            android:id="@+id/top_fragment"
+            android:name="com.github.kazukinr.android.sample.ui.top.TopFragment"
+            android:label="top_fragment"
+            tools:layout="@layout/top_fragment">
+
+        <action
+                android:id="@+id/action_top_to_binding_sample"
+                app:destination="@id/binding_sample_fragment"
+                app:enterAnim="@anim/slide_in_from_right"
+                app:exitAnim="@anim/slide_out_to_left"
+                app:popEnterAnim="@anim/slide_in_from_left"
+                app:popExitAnim="@anim/slide_out_to_right"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/binding_sample_fragment"
+            android:name="com.github.kazukinr.android.sample.ui.binding_sample.BindingSampleFragment"
+            android:label="binding_sample_fragment"
+            tools:layout="@layout/binding_sample_fragment">
+    </fragment>
+
+</navigation>

@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.github.kazukinr.android.sample.R
 import com.github.kazukinr.android.sample.databinding.TopFragmentBinding
 import com.github.kazukinr.android.sample.event.EventLiveDataObserver
 import com.github.kazukinr.android.sample.ui.get
 import dagger.android.support.DaggerFragment
-import timber.log.Timber
 import javax.inject.Inject
 
 class TopFragment : DaggerFragment() {
@@ -49,7 +49,13 @@ class TopFragment : DaggerFragment() {
     }
 
     private fun handleViewModelEvent(event: TopViewModelEvent) {
-        Timber.i("handleViewModelEvent : $event")
+        when (event) {
+            is TopViewModelEvent.NavigateToBindingSample -> {
+                binding?.buttonToBindingSample?.also {
+                    Navigation.findNavController(it).navigate(R.id.action_top_to_binding_sample)
+                }
+            }
+        }
     }
 
     interface Listener {

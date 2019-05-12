@@ -8,6 +8,10 @@ ext.deps = [
         constraintLayout        : 'androidx.constraintlayout:constraintlayout:2.0.0-alpha5',
         lifecycleExtensions     : 'androidx.lifecycle:lifecycle-extensions:2.0.0',
         lifecycleCompiler       : 'androidx.lifecycle:lifecycle-compiler:2.0.0',
+        navigationFragment      : 'androidx.navigation:navigation-fragment:2.0.0',
+        navigationUi            : 'androidx.navigation:navigation-ui:2.0.0',
+        navigationFragmentKtx   : 'androidx.navigation:navigation-fragment-ktx:2.0.0',
+        navigationUiKtx         : 'androidx.navigation:navigation-ui-ktx:2.0.0',
 
         // dagger2
         dagger                  : 'com.google.dagger:dagger:2.22.1',
