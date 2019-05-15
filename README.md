@@ -5,6 +5,7 @@ A sample project of basic android app.
 ## Using Libraries
 
 - Kotlin
+- Kotlin Coroutines
 - Android Jetpack
   - Android Architecture Components
     - Lifecycle

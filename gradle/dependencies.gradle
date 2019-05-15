@@ -1,6 +1,8 @@
 ext.deps = [
         // kotlin
         kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+        coroutines              : 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1',
+        coroutinesAndroid       : 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1',
 
         // androidx
         ktx                     : 'androidx.core:core-ktx:1.0.1',
