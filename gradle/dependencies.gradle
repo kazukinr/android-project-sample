@@ -1,42 +1,54 @@
 ext.deps = [
         // kotlin
-        kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
-        coroutines              : 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1',
-        coroutinesAndroid       : 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1',
+        kotlin                   : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+        coroutines               : 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1',
+        coroutinesAndroid        : 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1',
 
         // androidx
-        ktx                     : 'androidx.core:core-ktx:1.0.1',
-        appcompat               : 'androidx.appcompat:appcompat:1.0.2',
-        constraintLayout        : 'androidx.constraintlayout:constraintlayout:2.0.0-alpha5',
-        recyclerView            : 'androidx.recyclerview:recyclerview:1.0.0',
-        lifecycleExtensions     : 'androidx.lifecycle:lifecycle-extensions:2.0.0',
-        lifecycleCompiler       : 'androidx.lifecycle:lifecycle-compiler:2.0.0',
-        navigationFragment      : 'androidx.navigation:navigation-fragment:2.0.0',
-        navigationUi            : 'androidx.navigation:navigation-ui:2.0.0',
-        navigationFragmentKtx   : 'androidx.navigation:navigation-fragment-ktx:2.0.0',
-        navigationUiKtx         : 'androidx.navigation:navigation-ui-ktx:2.0.0',
-        roomRuntime             : 'androidx.room:room-runtime:2.0.0',
-        roomCompiler            : 'androidx.room:room-compiler:2.0.0',
-        roomRxJava2             : 'androidx.room:room-rxjava2:2.0.0',
-        roomTesting             : 'androidx.room:room-testing:2.0.0',
+        ktx                      : 'androidx.core:core-ktx:1.0.1',
+        appcompat                : 'androidx.appcompat:appcompat:1.0.2',
+        constraintLayout         : 'androidx.constraintlayout:constraintlayout:2.0.0-alpha5',
+        recyclerView             : 'androidx.recyclerview:recyclerview:1.0.0',
+        lifecycleExtensions      : 'androidx.lifecycle:lifecycle-extensions:2.0.0',
+        lifecycleCompiler        : 'androidx.lifecycle:lifecycle-compiler:2.0.0',
+        navigationFragment       : 'androidx.navigation:navigation-fragment:2.0.0',
+        navigationUi             : 'androidx.navigation:navigation-ui:2.0.0',
+        navigationFragmentKtx    : 'androidx.navigation:navigation-fragment-ktx:2.0.0',
+        navigationUiKtx          : 'androidx.navigation:navigation-ui-ktx:2.0.0',
+        roomRuntime              : 'androidx.room:room-runtime:2.0.0',
+        roomCompiler             : 'androidx.room:room-compiler:2.0.0',
+        roomRxJava2              : 'androidx.room:room-rxjava2:2.0.0',
+        roomTesting              : 'androidx.room:room-testing:2.0.0',
 
         // dagger2
-        dagger                  : 'com.google.dagger:dagger:2.22.1',
-        daggerAndroid           : 'com.google.dagger:dagger-android:2.22.1',
-        daggerAndroidSupport    : 'com.google.dagger:dagger-android-support:2.22.1',
-        daggerCompiler          : 'com.google.dagger:dagger-compiler:2.22.1',
-        daggerProcessor         : 'com.google.dagger:dagger-android-processor:2.22.1',
+        dagger                   : 'com.google.dagger:dagger:2.22.1',
+        daggerAndroid            : 'com.google.dagger:dagger-android:2.22.1',
+        daggerAndroidSupport     : 'com.google.dagger:dagger-android-support:2.22.1',
+        daggerCompiler           : 'com.google.dagger:dagger-compiler:2.22.1',
+        daggerProcessor          : 'com.google.dagger:dagger-android-processor:2.22.1',
 
         // Rx
-        rxJava2                 : 'io.reactivex.rxjava2:rxjava:2.2.8',
-        rxAndroid               : 'io.reactivex.rxjava2:rxandroid:2.1.1',
-        rxReplayingShare        : 'com.jakewharton.rx2:replaying-share-kotlin:2.1.1',
+        rxJava2                  : 'io.reactivex.rxjava2:rxjava:2.2.8',
+        rxAndroid                : 'io.reactivex.rxjava2:rxandroid:2.1.1',
+        rxReplayingShare         : 'com.jakewharton.rx2:replaying-share-kotlin:2.1.1',
+
+        // Json
+        moshi                    : 'com.squareup.moshi:moshi:1.8.0',
+        moshiKotlin              : 'com.squareup.moshi:moshi-kotlin:1.8.0',
+        modhiKotlinCodeGen       : 'com.squareup.moshi:moshi-kotlin-codegen:1.8.0',
+
+        // Network
+        okhttp3                  : 'com.squareup.okhttp3:okhttp:3.14.1',
+        okhttp3LoggingInterceptor: 'com.squareup.okhttp3:logging-interceptor:3.14.1',
+        retrofit2                : 'com.squareup.retrofit2:retrofit:2.5.0',
+        retrofit2Moshi           : 'com.squareup.retrofit2:converter-moshi:2.5.0',
+        retrofit2RxJava2         : 'com.squareup.retrofit2:adapter-rxjava2:2.5.0',
 
         // utilities
-        timber                  : 'com.jakewharton.timber:timber:4.7.1',
+        timber                   : 'com.jakewharton.timber:timber:4.7.1',
 
         // tests
-        junit                   : 'junit:junit:4.12',
-        androidxTestRunner      : 'androidx.test:runner:1.1.1',
-        espressoCore            : 'androidx.test.espresso:espresso-core:3.1.1'
+        junit                    : 'junit:junit:4.12',
+        androidxTestRunner       : 'androidx.test:runner:1.1.1',
+        espressoCore             : 'androidx.test.espresso:espresso-core:3.1.1'
 ]
