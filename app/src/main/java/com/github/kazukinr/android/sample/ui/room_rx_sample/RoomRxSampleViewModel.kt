@@ -40,6 +40,8 @@ class RoomRxSampleViewModel @Inject constructor(
             if (it?.isNotEmpty() == true) {
                 GlobalScope.launch {
                     addUser(it).await()
+                    // Clear input form on completed.
+                    headerData.inputUserName = null
                 }
             }
         }
