@@ -2,7 +2,7 @@
 
 A sample project of basic android app.
 
-## Using Libraries
+## Libraries Used
 
 - Kotlin
 - Kotlin Coroutines
@@ -15,6 +15,7 @@ A sample project of basic android app.
   - Android KTX
   - AppCompat
   - ConstraintLayout
+  - RecyclerView
   - DataBinding
 - Dagger2
 - RxJava2

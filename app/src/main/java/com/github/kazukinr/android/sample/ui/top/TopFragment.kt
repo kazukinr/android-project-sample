@@ -31,10 +31,10 @@ class TopFragment : DaggerFragment() {
         }
 
         return DataBindingUtil.inflate<TopFragmentBinding>(
-            inflater,
-            R.layout.top_fragment,
-            container,
-            false
+                inflater,
+                R.layout.top_fragment,
+                container,
+                false
         ).also {
             binding = it
         }.root
@@ -55,11 +55,18 @@ class TopFragment : DaggerFragment() {
                     Navigation.findNavController(it).navigate(R.id.action_top_to_binding_sample)
                 }
             }
+            is TopViewModelEvent.NavigateToRoomRxSample -> {
+                binding?.buttonToRoomRxSample?.also {
+                    Navigation.findNavController(it).navigate(R.id.action_top_to_room_rx_sample)
+                }
+            }
         }
     }
 
     interface Listener {
 
         fun onBindingSampleClicked()
+
+        fun onRoomRxSampleClicked()
     }
 }

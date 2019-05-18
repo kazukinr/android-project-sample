@@ -31,14 +31,18 @@ dependencies {
 
     implementation deps.kotlin
     implementation deps.ktx
+    implementation deps.coroutines
+    implementation deps.coroutinesAndroid
     implementation deps.appcompat
     implementation deps.constraintLayout
+    implementation deps.recyclerView
     implementation deps.lifecycleExtensions
     kapt deps.lifecycleCompiler
     implementation deps.navigationFragment
     implementation deps.navigationUi
     implementation deps.navigationFragmentKtx
     implementation deps.navigationUiKtx
+    implementation deps.roomRuntime
 
     // dagger2
     implementation deps.dagger
@@ -46,6 +50,11 @@ dependencies {
     implementation deps.daggerAndroidSupport
     kapt deps.daggerCompiler
     kapt deps.daggerProcessor
+
+    // Rx
+    implementation deps.rxJava2
+    implementation deps.rxAndroid
+    implementation deps.rxReplayingShare
 
     // uitilities
     implementation deps.timber
