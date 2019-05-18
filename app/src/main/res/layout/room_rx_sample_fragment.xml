@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.github.kazukinr.android.sample.ui.room_rx_sample.RoomRxSampleViewModel" />
+
+    </data>
+
+    <com.github.kazukinr.android.sample.ui.room_rx_sample.RoomRxSampleView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:headerData="@{viewModel.headerData}"
+        app:listener="@{viewModel}"
+        app:users="@{viewModel.users}" />
+
+</layout>
+

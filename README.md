@@ -2,17 +2,21 @@
 
 A sample project of basic android app.
 
-## Using Libraries
+## Libraries Used
 
 - Kotlin
+- Kotlin Coroutines
 - Android Jetpack
   - Android Architecture Components
     - Lifecycle
     - LiveData
     - Navigation
+    - Room
   - Android KTX
   - AppCompat
   - ConstraintLayout
+  - RecyclerView
   - DataBinding
 - Dagger2
+- RxJava2
 - Timber

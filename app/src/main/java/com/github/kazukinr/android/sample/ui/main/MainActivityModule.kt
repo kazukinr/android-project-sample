@@ -6,6 +6,8 @@ import com.github.kazukinr.android.sample.di.mapkey.ViewModelKey
 import com.github.kazukinr.android.sample.di.scope.FragmentScope
 import com.github.kazukinr.android.sample.ui.binding_sample.BindingSampleFragment
 import com.github.kazukinr.android.sample.ui.binding_sample.BindingSampleFragmentModule
+import com.github.kazukinr.android.sample.ui.room_rx_sample.RoomRxSampleFragment
+import com.github.kazukinr.android.sample.ui.room_rx_sample.RoomRxSampleFragmentModule
 import com.github.kazukinr.android.sample.ui.top.TopFragment
 import com.github.kazukinr.android.sample.ui.top.TopFragmentModule
 import dagger.Binds
@@ -39,4 +41,12 @@ interface MainActivityModule {
         ]
     )
     fun contributesBindingSampleFragment(): BindingSampleFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector(
+        modules = [
+            RoomRxSampleFragmentModule::class
+        ]
+    )
+    fun contributesRoomRxSampleFragment(): RoomRxSampleFragment
 }

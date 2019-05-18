@@ -11,4 +11,8 @@ class TopViewModel @Inject constructor() : ViewModel(), TopFragment.Listener {
     override fun onBindingSampleClicked() {
         event.emitEvent(TopViewModelEvent.NavigateToBindingSample)
     }
+
+    override fun onRoomRxSampleClicked() {
+        event.emitEvent(TopViewModelEvent.NavigateToRoomRxSample)
+    }
 }

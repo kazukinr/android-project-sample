@@ -2,9 +2,13 @@
     <string name="app_name">android-project-sample</string>
 
     <string name="top_button_to_binding_sample">To Binding Sample</string>
+    <string name="top_button_to_room_rx_sample">To Room Rx Sample</string>
 
     <string name="binding_sample_input_text_hint">Please input text</string>
     <string name="binding_sample_copy_input_text_label">Copy of InputText : </string>
     <string name="binding_sample_length_input_text_label">Length of InputText : </string>
     <string name="binding_sample_button_to_top">Back to Top</string>
+
+    <string name="room_rx_sample_input_new_user_hint">Input name of new user</string>
+    <string name="room_rx_sample_button_add_user">Add User</string>
 </resources>
