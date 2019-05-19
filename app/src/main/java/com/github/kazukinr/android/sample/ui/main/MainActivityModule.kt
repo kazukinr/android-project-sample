@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import com.github.kazukinr.android.sample.di.mapkey.ViewModelKey
 import com.github.kazukinr.android.sample.di.scope.FragmentScope
+import com.github.kazukinr.android.sample.ui.api_call_sample.ApiCallSampleFragment
+import com.github.kazukinr.android.sample.ui.api_call_sample.ApiCallSampleFragmentModule
 import com.github.kazukinr.android.sample.ui.binding_sample.BindingSampleFragment
 import com.github.kazukinr.android.sample.ui.binding_sample.BindingSampleFragmentModule
 import com.github.kazukinr.android.sample.ui.room_rx_sample.RoomRxSampleFragment
@@ -49,4 +51,12 @@ interface MainActivityModule {
         ]
     )
     fun contributesRoomRxSampleFragment(): RoomRxSampleFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector(
+        modules = [
+            ApiCallSampleFragmentModule::class
+        ]
+    )
+    fun contributesApiCallSampleFragment(): ApiCallSampleFragment
 }

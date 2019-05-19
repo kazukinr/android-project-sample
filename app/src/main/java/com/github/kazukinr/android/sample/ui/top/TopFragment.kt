@@ -60,6 +60,11 @@ class TopFragment : DaggerFragment() {
                     Navigation.findNavController(it).navigate(R.id.action_top_to_room_rx_sample)
                 }
             }
+            is TopViewModelEvent.NavigateToApiCallSample -> {
+                binding?.buttonToApiCallSample?.also {
+                    Navigation.findNavController(it).navigate(R.id.action_top_to_api_call_sample)
+                }
+            }
         }
     }
 
@@ -68,5 +73,7 @@ class TopFragment : DaggerFragment() {
         fun onBindingSampleClicked()
 
         fun onRoomRxSampleClicked()
+
+        fun onApiCallSampleClicked()
     }
 }

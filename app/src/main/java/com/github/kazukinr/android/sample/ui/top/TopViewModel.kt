@@ -15,4 +15,8 @@ class TopViewModel @Inject constructor() : ViewModel(), TopFragment.Listener {
     override fun onRoomRxSampleClicked() {
         event.emitEvent(TopViewModelEvent.NavigateToRoomRxSample)
     }
+
+    override fun onApiCallSampleClicked() {
+        event.emitEvent(TopViewModelEvent.NavigateToApiCallSample)
+    }
 }

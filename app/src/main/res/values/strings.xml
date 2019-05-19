@@ -3,6 +3,7 @@
 
     <string name="top_button_to_binding_sample">To Binding Sample</string>
     <string name="top_button_to_room_rx_sample">To Room Rx Sample</string>
+    <string name="top_button_to_api_call_sample">To Api Call Sample</string>
 
     <string name="binding_sample_input_text_hint">Please input text</string>
     <string name="binding_sample_copy_input_text_label">Copy of InputText : </string>
@@ -11,4 +12,7 @@
 
     <string name="room_rx_sample_input_new_user_hint">Input name of new user</string>
     <string name="room_rx_sample_button_add_user">Add User</string>
+
+    <string name="api_call_sample_input_user_hint">Input name of GitHub user</string>
+    <string name="api_call_sample_button_search_repos">Search Repos</string>
 </resources>

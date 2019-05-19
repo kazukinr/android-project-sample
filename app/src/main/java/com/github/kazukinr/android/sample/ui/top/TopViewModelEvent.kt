@@ -5,4 +5,6 @@ sealed class TopViewModelEvent {
     object NavigateToBindingSample : TopViewModelEvent()
 
     object NavigateToRoomRxSample : TopViewModelEvent()
+
+    object NavigateToApiCallSample : TopViewModelEvent()
 }

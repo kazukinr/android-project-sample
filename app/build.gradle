@@ -56,6 +56,20 @@ dependencies {
     implementation deps.rxAndroid
     implementation deps.rxReplayingShare
 
+    // Json
+    implementation deps.moshi
+    implementation(deps.moshiKotlin) {
+        exclude group: 'org.jetbrains.kotlin'
+    }
+    kapt deps.modhiKotlinCodeGen
+
+    // Network
+    implementation deps.okhttp3
+    implementation deps.okhttp3LoggingInterceptor
+    implementation deps.retrofit2
+    implementation deps.retrofit2Moshi
+    implementation deps.retrofit2RxJava2
+
     // uitilities
     implementation deps.timber
 

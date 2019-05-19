@@ -19,4 +19,8 @@ A sample project of basic android app.
   - DataBinding
 - Dagger2
 - RxJava2
+- RxAndroid
+- OkHttp3
+- Retrofit2
+- Moshi
 - Timber
