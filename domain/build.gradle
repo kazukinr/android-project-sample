@@ -36,6 +36,9 @@ dependencies {
     // Rx
     implementation deps.rxJava2
 
+    // uitilities
+    implementation deps.timber
+
     // tests
     testImplementation deps.junit
     androidTestImplementation deps.androidxTestRunner

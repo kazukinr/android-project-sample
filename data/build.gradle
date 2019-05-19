@@ -48,6 +48,9 @@ dependencies {
     implementation deps.retrofit2Moshi
     implementation deps.retrofit2RxJava2
 
+    // uitilities
+    implementation deps.timber
+
     // tests
     testImplementation deps.junit
     androidTestImplementation deps.androidxTestRunner
