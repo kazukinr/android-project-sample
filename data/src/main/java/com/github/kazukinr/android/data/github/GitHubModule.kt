@@ -9,5 +9,8 @@ import dagger.Module
 internal interface GitHubModule {
 
     @Binds
+    fun bindsGitHubRepository(impl: GitHubRepositoryImpl): GitHubRepository
+
+    @Binds
     fun bindsGitHubApi(impl: GitHubApiImpl): GitHubApi
 }

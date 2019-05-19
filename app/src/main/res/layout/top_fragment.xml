@@ -49,10 +49,23 @@
             android:onClick="@{() -> listener.onRoomRxSampleClicked()}"
             android:padding="8dp"
             android:text="@string/top_button_to_room_rx_sample"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button_to_api_call_sample"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@id/button_to_binding_sample" />
+
+        <Button
+            android:id="@+id/button_to_api_call_sample"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> listener.onApiCallSampleClicked()}"
+            android:padding="8dp"
+            android:text="@string/top_button_to_api_call_sample"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/button_to_room_rx_sample" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
