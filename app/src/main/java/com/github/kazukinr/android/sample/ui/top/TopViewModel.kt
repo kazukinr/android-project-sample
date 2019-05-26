@@ -19,4 +19,8 @@ class TopViewModel @Inject constructor() : ViewModel(), TopFragment.Listener {
     override fun onApiCallSampleClicked() {
         event.emitEvent(TopViewModelEvent.NavigateToApiCallSample)
     }
+
+    override fun onExoPlayerSampleClicked() {
+        event.emitEvent(TopViewModelEvent.NavigateToExoPlayerSample)
+    }
 }

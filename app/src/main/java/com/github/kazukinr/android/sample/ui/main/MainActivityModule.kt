@@ -8,6 +8,8 @@ import com.github.kazukinr.android.sample.ui.api_call_sample.ApiCallSampleFragme
 import com.github.kazukinr.android.sample.ui.api_call_sample.ApiCallSampleFragmentModule
 import com.github.kazukinr.android.sample.ui.binding_sample.BindingSampleFragment
 import com.github.kazukinr.android.sample.ui.binding_sample.BindingSampleFragmentModule
+import com.github.kazukinr.android.sample.ui.exo_player_sample.ExoPlayerSampleFragment
+import com.github.kazukinr.android.sample.ui.exo_player_sample.ExoPlayerSampleFragmentModule
 import com.github.kazukinr.android.sample.ui.room_rx_sample.RoomRxSampleFragment
 import com.github.kazukinr.android.sample.ui.room_rx_sample.RoomRxSampleFragmentModule
 import com.github.kazukinr.android.sample.ui.top.TopFragment
@@ -59,4 +61,12 @@ interface MainActivityModule {
         ]
     )
     fun contributesApiCallSampleFragment(): ApiCallSampleFragment
+
+    @FragmentScope
+    @ContributesAndroidInjector(
+        modules = [
+            ExoPlayerSampleFragmentModule::class
+        ]
+    )
+    fun contributesExoPlayerSampleFragment(): ExoPlayerSampleFragment
 }

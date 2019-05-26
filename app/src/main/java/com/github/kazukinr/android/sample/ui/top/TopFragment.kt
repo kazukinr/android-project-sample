@@ -65,6 +65,11 @@ class TopFragment : DaggerFragment() {
                     Navigation.findNavController(it).navigate(R.id.action_top_to_api_call_sample)
                 }
             }
+            is TopViewModelEvent.NavigateToExoPlayerSample -> {
+                binding?.buttonToExoPlayerSample?.also {
+                    Navigation.findNavController(it).navigate(R.id.action_top_to_exo_player_sample)
+                }
+            }
         }
     }
 
@@ -75,5 +80,7 @@ class TopFragment : DaggerFragment() {
         fun onRoomRxSampleClicked()
 
         fun onApiCallSampleClicked()
+
+        fun onExoPlayerSampleClicked()
     }
 }
