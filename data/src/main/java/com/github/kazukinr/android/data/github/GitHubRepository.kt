@@ -8,6 +8,8 @@ import javax.inject.Inject
 interface GitHubRepository {
 
     fun getUserRepos(userId: String): Single<List<Repo>>
+
+    suspend fun getUserReposSuspend(userId: String): List<Repo>
 }
 
 internal class GitHubRepositoryImpl @Inject constructor(
@@ -16,4 +18,7 @@ internal class GitHubRepositoryImpl @Inject constructor(
 
     override fun getUserRepos(userId: String): Single<List<Repo>> =
         gitHubApi.getUserRepos(userId)
+
+    override suspend fun getUserReposSuspend(userId: String): List<Repo> =
+        gitHubApi.getUserReposSuspend(userId)
 }

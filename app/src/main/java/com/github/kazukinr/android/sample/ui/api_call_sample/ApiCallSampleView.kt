@@ -48,6 +48,8 @@ class ApiCallSampleView @JvmOverloads constructor(
 
     interface Listener {
 
-        fun onSearchUserReposClicked()
+        fun onSearchUserReposRxClicked()
+
+        fun onSearchUserReposCoroutineClicked()
     }
 }

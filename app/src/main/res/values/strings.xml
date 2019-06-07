@@ -15,4 +15,6 @@
 
     <string name="api_call_sample_input_user_hint">Input name of GitHub user</string>
     <string name="api_call_sample_button_search_repos">Search Repos</string>
+    <string name="api_call_sample_button_search_by_rx">by Rx</string>
+    <string name="api_call_sample_button_search_by_coroutine">by Coroutine</string>
 </resources>
