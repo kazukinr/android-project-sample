@@ -44,6 +44,11 @@ ext.deps = [
         retrofit2Moshi           : 'com.squareup.retrofit2:converter-moshi:2.6.0',
         retrofit2RxJava2         : 'com.squareup.retrofit2:adapter-rxjava2:2.6.0',
 
+        // ExoPlayer
+        exoplayerCore            : 'com.google.android.exoplayer:exoplayer-core:2.10.1',
+        exoplayerDash            : 'com.google.android.exoplayer:exoplayer-dash:2.10.1',
+        exoplayerUi              : 'com.google.android.exoplayer:exoplayer-ui:2.10.1',
+
         // utilities
         timber                   : 'com.jakewharton.timber:timber:4.7.1',
 

@@ -70,6 +70,11 @@ dependencies {
     implementation deps.retrofit2Moshi
     implementation deps.retrofit2RxJava2
 
+    // ExoPlayer
+    implementation deps.exoplayerCore
+    implementation deps.exoplayerDash
+    implementation deps.exoplayerUi
+
     // uitilities
     implementation deps.timber
 

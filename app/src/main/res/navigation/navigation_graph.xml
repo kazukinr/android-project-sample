@@ -35,6 +35,14 @@
             app:popEnterAnim="@anim/slide_in_from_left"
             app:popExitAnim="@anim/slide_out_to_right" />
 
+        <action
+            android:id="@+id/action_top_to_exo_player_sample"
+            app:destination="@id/exo_player_sample_fragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+
     </fragment>
 
     <fragment
@@ -54,5 +62,11 @@
         android:name="com.github.kazukinr.android.sample.ui.api_call_sample.ApiCallSampleFragment"
         android:label="api_call_sample_fragment"
         tools:layout="@layout/api_call_sample_fragment" />
+
+    <fragment
+        android:id="@+id/exo_player_sample_fragment"
+        android:name="com.github.kazukinr.android.sample.ui.exo_player_sample.ExoPlayerSampleFragment"
+        android:label="exo_player_sample_fragment"
+        tools:layout="@layout/exo_player_sample_fragment" />
 
 </navigation>

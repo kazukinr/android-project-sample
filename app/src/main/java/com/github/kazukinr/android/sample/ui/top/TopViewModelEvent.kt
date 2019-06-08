@@ -7,4 +7,6 @@ sealed class TopViewModelEvent {
     object NavigateToRoomRxSample : TopViewModelEvent()
 
     object NavigateToApiCallSample : TopViewModelEvent()
+
+    object NavigateToExoPlayerSample : TopViewModelEvent()
 }
