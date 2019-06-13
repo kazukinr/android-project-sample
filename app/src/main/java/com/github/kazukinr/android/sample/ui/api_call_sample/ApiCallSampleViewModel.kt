@@ -6,9 +6,10 @@ import com.github.kazukinr.android.data.github.dto.Repo
 import com.github.kazukinr.android.domain.github.query.GetReposByUser
 import com.github.kazukinr.android.domain.github.query.GetReposByUserSuspend
 import com.github.kazukinr.android.sample.ui.DisposableLifecycleObserver
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -36,15 +37,13 @@ class ApiCallSampleViewModel @Inject constructor(
     override fun onSearchUserReposCoroutineClicked() {
         headerData.inputUserId.also {
             if (it?.isNotEmpty() == true) {
-                GlobalScope.launch {
+                CoroutineScope(Dispatchers.Main).launch {
                     try {
-                        GlobalScope.async {
+                        withContext(Dispatchers.Default) {
                             getReposByUserSuspend(it)
+                        }.also {
+                            repos.set(it)
                         }
-                            .await()
-                            .also {
-                                repos.set(it)
-                            }
                     } catch (e: Exception) {
                         Timber.e(e)
                     }

@@ -9,7 +9,8 @@ import com.github.kazukinr.android.domain.user.command.UpdateUser
 import com.github.kazukinr.android.domain.user.query.ObserveUsers
 import com.github.kazukinr.android.sample.ui.DisposableLifecycleObserver
 import io.reactivex.disposables.CompositeDisposable
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
@@ -38,7 +39,7 @@ class RoomRxSampleViewModel @Inject constructor(
     override fun onAddUserClicked() {
         headerData.inputUserName.also {
             if (it?.isNotEmpty() == true) {
-                GlobalScope.launch {
+                CoroutineScope(Dispatchers.Default).launch {
                     addUser(it).await()
                     // Clear input form on completed.
                     headerData.inputUserName = null
